@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    meta charset="UTF-8"
+  	title  Game Of Life
+    = stylesheet_link_tag    'normalize', media: 'all', 'data-turbolinks-track' => true
+  	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+    = stylesheet_link_tag    'animate', media: 'all', 'data-turbolinks-track' => true
+  	= csrf_meta_tags 
+    = favicon_link_tag 'favicon.ico'
+
+    link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'
+    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    meta name="description" content="Conway's Game of Life is a mathematical simulation where cells live or die based on certain rules."
+    script type="text/javascript" src="//cdn.bounce.bar/113702.js"
+	body
+    .container
+      .row
+        .col-lg-4.col-lg-offset-4.col-md-4.col-md-offset-4
+          == yield
+    footer
